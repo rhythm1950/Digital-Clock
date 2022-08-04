@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <title>Digital Clock</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="clock">
-        <h2>The Time Right Now</h2>
+      <h2>The Time Right Now</h2>
 
-        <div id="time">
-            <div><span id="hours">00</span><span class="hands">Hours</span></div>
-            <div><span id="minutes">00</span><span class="hands">Minutes</span></div>
-            <div><span id="seconds">00</span><span class="hands">Seconds</span></div>
+      <div id="time">
+        <div><span id="hours">00</span><span class="hands">Hours</span></div>
+        <div>
+          <span id="minutes">00</span><span class="hands">Minutes</span>
         </div>
+        <div>
+          <span id="seconds">00</span><span class="hands">Seconds</span>
+        </div>
+      </div>
     </div>
 
     <script type="text/javascript">
-        function clock() {
-            let hours = document.getElementById('hours');
-            let minutes = document.getElementById('minutes');
-            let seconds = document.getElementById('seconds');
+      function clock() {
+        let hours = document.getElementById("hours");
+        let minutes = document.getElementById("minutes");
+        let seconds = document.getElementById("seconds");
 
-            let hh = new Date().getHours();
-            let mm = new Date().getMinutes();
-            let ss = new Date().getSeconds();
+        let hh = new Date().getHours();
+        let mm = new Date().getMinutes();
+        let ss = new Date().getSeconds();
 
-            hours.innerHTML = hh;
-            minutes.innerHTML = mm;
-            seconds.innerHTML = ss;
-        }
+        hours.innerHTML = hh;
+        minutes.innerHTML = mm;
+        seconds.innerHTML = ss;
+      }
 
-        let interval = setInterval(clock, 1000);
+      let interval = setInterval(clock, 1000);
     </script>
-</body>
-
+  </body>
 </html>
